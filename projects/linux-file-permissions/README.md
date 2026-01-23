@@ -8,7 +8,7 @@ Checked file/folder permissions in Linux and fixed access so only the right user
 - chmod
 - ls
 
-## What I did (high level)
+## What I did 
 1. Checked permissions using `ls -l` and `ls -la` (including hidden files).
 2. Reviewed what the permission string means (who can read/write/execute).
 3. Updated permissions with `chmod` to remove access that shouldn’t be there.
