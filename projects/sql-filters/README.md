@@ -6,7 +6,7 @@ Used SQL filters to investigate suspicious login activity and pull specific empl
 ## Tools used
 - SQL (WHERE, AND/OR, NOT)
 
-## What I did (high level)
+## What I did
 1. Filtered for after-hours failed login attempts.
 2. Checked login attempts on specific suspicious dates.
 3. Filtered out logins that were not from Mexico.
