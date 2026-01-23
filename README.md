@@ -1,14 +1,9 @@
-# Cyber Portfolio
+# Cyber Portfolio (Leon)
 
-Hands-on cybersecurity projects and lab write-ups.
+This repo is a simple portfolio of cybersecurity labs and write-ups.
 
 ## Projects
-- **Splunk + Sysmon (Windows logging lab)**
-  - Built a Windows logging setup using Sysmon + Splunk
-  - Verified data was coming in and searched key events (process, network, DNS)
-  - Write-up: projects/splunk-sysmon-lab/README.md
-
-## What I’m practicing
-- Log collection and searching (Splunk)
-- Host event visibility (Sysmon)
-- Basic threat hunting questions (what ran, what connected out, what DNS was queried)
+### 1) Splunk + Sysmon (Windows Logging Lab)
+- What it is: Built a Windows logging setup using Sysmon + Splunk and ran searches to pull process, DNS, and network activity.
+- Evidence: Screenshots + write-up inside the project folder
+- Link: ./projects/splunk-sysmon-lab/
