@@ -3,8 +3,15 @@
 This repo is a simple portfolio of cybersecurity labs and write-ups.  
 Each project folder includes a short write-up (README) and supporting files (screenshots, PDFs, DOCX, etc.).
 
+## Quick links
+- [Splunk + Sysmon (Windows Logging Lab)](#1-splunk--sysmon-windows-logging-lab)
+- [Linux File Permissions (Google Cybersecurity Certificate)](#2-linux-file-permissions-google-cybersecurity-certificate)
+- [SQL Filters (Google Cybersecurity Certificate)](#3-sql-filters-google-cybersecurity-certificate)
+- [Python Allow-List Cleanup (Google Cybersecurity Certificate)](#4-python-allow-list-cleanup-google-cybersecurity-certificate)
+- [Vulnerability Assessment (Google Cybersecurity Certificate)](#5-vulnerability-assessment-google-cybersecurity-certificate)
+- [Controls + Compliance Checklist (Google Cybersecurity Certificate)](#6-controls--compliance-checklist-google-cybersecurity-certificate)
+- [Incident Handler’s Journal (Google Cybersecurity Certificate)](#7-incident-handlers-journal-google-cybersecurity-certificate)
 ---
-
 ## Projects
 
 ### 1) Splunk + Sysmon (Windows Logging Lab)
