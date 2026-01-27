@@ -1,119 +1,119 @@
 # Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)
 
-## One-line summary
-Captured and analyzed real network traffic with Wireshark, then used display filters and built-in stats to identify DNS lookups, ICMP pings, cleartext HTTP requests, and encrypted TLS traffic.
+## Quick summary
+I used Wireshark to capture normal network traffic from my computer, then used a few filters to find and understand DNS lookups, ping traffic, a simple HTTP request, and encrypted (TLS) traffic.
 
 ---
 
-## Tools used
+## Tools I used
 - Wireshark (Windows)
-- Web browser + `ping` (to generate traffic)
+- A web browser + `ping` (just to generate traffic)
 
 ---
 
-## What I did 
-1. **Captured live traffic** on my active network interface (Wi-Fi)
-2. **Used display filters** to isolate specific protocols (DNS, ICMP, HTTP, TLS)
-3. **Validated what was happening** (ex: DNS queries/responses, ping requests/replies)
-4. **Inspected an HTTP conversation** and used **Follow TCP Stream** to view the request/response
-5. Used **Protocol Hierarchy** + **Conversations** to summarize the capture and find the “top talkers”
+## What I did (simple version)
+1. Started a capture on my Wi-Fi connection so Wireshark could “see” traffic going in and out.
+2. Let it run for a short time while I did normal stuff (opened a website + ran a ping).
+3. Used filters like `dns`, `icmp`, `http`, and `tls` to narrow down what I wanted to look at.
+4. Clicked a few packets to see the details Wireshark shows (like IPs, ports, and request/response info).
+5. Used a couple built-in stats screens to get a summary of what was captured.
 
 ---
 
-## Why this matters
-In a SOC / analyst role, packet captures help you answer questions like:
-- “What domain did this host query?”
-- “Did the host successfully reach an external IP?”
-- “Is this traffic encrypted (TLS) or cleartext (HTTP)?”
-- “Who is this machine talking to the most?”
+## Why I did this
+I’m still learning networking, so the goal here was to practice:
+- capturing traffic
+- filtering it so it’s not overwhelming
+- recognizing a few common types of traffic (DNS, ping, web traffic)
+- using Wireshark’s stats to get a quick overview
 
 ---
 
-## Key filters I used (and why)
-- `dns` — isolate domain lookups and DNS responses  
-- `icmp` — confirm ping request/reply behavior  
-- `http` — find cleartext web requests (useful for investigations)  
-- `tls` — identify encrypted traffic (common on port 443)  
-- `tcp.stream eq 12` — isolate one conversation/flow for easier inspection
+## Filters I used (and what they helped me find)
+- `dns` — domain lookups (when your computer asks “what IP is this website?”)
+- `icmp` — ping traffic (request + reply)
+- `http` — non-encrypted web traffic (you can sometimes read parts of it)
+- `tls` — encrypted web traffic (common for normal browsing)
+- `tcp.stream eq 12` — focuses on one conversation so it’s easier to follow
 
 ---
 
-## Evidence / screenshots
+## Screenshots / proof
 
 ### 1) Capture running (baseline traffic)
-This shows the live capture in progress (background traffic like mDNS/IGMP is normal on many networks).
+This is the capture running. I saw a lot of “background” traffic too, which seems normal on most networks.
 ![captured traffic](./captured-network-traffic.png)
 
 ---
 
-### 2) DNS traffic (domain lookups)
-Filtered to `dns` to view queries/responses. This is useful for answering “what domains did this host request?”
+### 2) DNS traffic (website lookups)
+Filtered to `dns` to see lookups and responses. This is basically how my computer figures out what IP to connect to.
 ![dns filter](./dns-filter.png)
 
 What I noticed:
-- DNS uses **UDP/53** in many cases
-- You can often see returned **A/AAAA records** and sometimes **CNAMEs**
+- There are “question” packets (asking) and “answer” packets (responding)
+- Some responses include IP addresses
 
 ---
 
 ### 3) ICMP traffic (ping)
-Filtered to `icmp` to validate ping activity (request + reply). Helpful for connectivity checks.
+Filtered to `icmp` to see ping requests and replies.
 ![icmp filter](./icmp-filter.png)
 
+What I noticed:
+- There’s a request and then a reply, back and forth
+
 ---
 
-### 4) HTTP traffic (cleartext web request)
-Filtered to `http` to find a plain HTTP request/response.
+### 4) HTTP traffic (not encrypted)
+Filtered to `http` to find a simple web request.
 ![http filter](./http-filter.png)
 
+Why this stood out:
+- HTTP can sometimes show readable info (unlike encrypted traffic)
+
 ---
 
-### 5) Follow TCP Stream (reconstruct the conversation)
-Used **Follow → TCP Stream** to view the request/response for the selected flow.
+### 5) Follow TCP Stream (see the conversation)
+I used Wireshark’s **Follow → TCP Stream** to view the request/response in an easier format.
 ![follow tcp stream](./follow-tcp-stream.png)
 
-Why this is important:
-- It reconstructs what was said over the connection (when it’s not encrypted)
-- Great for investigating suspicious downloads, beaconing, or data exfil in cleartext traffic
+Why I used it:
+- It puts the conversation together so it’s easier to understand than clicking packets one-by-one
 
 ---
 
 ### 6) TLS traffic (encrypted)
-Filtered to `tls` to show encrypted sessions. You can see metadata, but not the plaintext content.
+Filtered to `tls` to see encrypted traffic.
 ![tls filter](./tls-filter.png)
 
+What I noticed:
+- You can still see who is talking to who, but not the actual content (because it’s encrypted)
+
 ---
 
-### 7) Protocol Hierarchy Statistics (what protocols dominate)
-Used **Statistics → Protocol Hierarchy** to summarize the capture.
+### 7) Protocol Hierarchy (overall summary)
+I used **Statistics → Protocol Hierarchy** to see a quick breakdown of what kinds of traffic were in the capture.
 ![protocol hierarchy](./hierarchy-statistics.png)
 
-What I noticed:
-- Most traffic was **TCP/TLS** (normal for modern browsing)
-- A smaller portion was **UDP/QUIC** and other background traffic
-
 ---
 
-### 8) Conversations (top talkers)
-Used **Statistics → Conversations** to see which IPs/ports had the most activity.
+### 8) Conversations (who talked the most)
+I used **Statistics → Conversations** to see which connections had the most activity.
 ![conversations](./conversations.png)
 
-Why this is useful:
-- Quickly spot unusual external connections
-- Identify the “main destinations” and where to investigate first
+Why I checked this:
+- It helps show the “main” connections without having to scroll through everything
 
 ---
 
-## Notes on privacy
-I did **not** upload the full `.pcapng` file to my portfolio because packet captures can contain sensitive data. Screenshots provide proof of work without exposing private traffic.
+## Privacy note
+I didn’t upload the full `.pcapng` file because packet captures can include private info. Screenshots are enough to show what I did without exposing sensitive data.
 
 ---
 
-## Next improvements (optional)
-- Capture again using a short time window + only the traffic you generate
-- Create a second lab focusing on:
-  - DNS tunneling indicators
-  - Suspicious HTTP user-agents / odd URIs
-  - TLS SNI / certificate inspection
-  - Detecting port scans in a capture
+## If I do this again (next time)
+- Capture for a shorter time (like 1–2 minutes) so it’s easier to review
+- Generate traffic on purpose (visit one site + run one ping) so it’s cleaner
+- Try a second lab focused on something specific (like DNS only or HTTP only)
 
