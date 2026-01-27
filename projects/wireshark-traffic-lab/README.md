@@ -11,7 +11,7 @@ Captured and analyzed real network traffic with Wireshark, then used display fil
 
 ---
 
-## What I did (high level)
+## What I did 
 1. **Captured live traffic** on my active network interface (Wi-Fi)
 2. **Used display filters** to isolate specific protocols (DNS, ICMP, HTTP, TLS)
 3. **Validated what was happening** (ex: DNS queries/responses, ping requests/replies)
