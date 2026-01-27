@@ -1,72 +1,81 @@
 # Cyber Portfolio (Leon)
 
-This repo is a simple portfolio of cybersecurity labs and write-ups.  
-Each project folder includes a short write-up (README) and supporting files (screenshots, PDFs, DOCX, etc.).
+This repo is my simple portfolio of labs and write-ups.
+Each project folder has a short README and supporting files (screenshots, PDFs, DOCX, etc.).
+
+---
 
 ## Quick links
-- [Splunk + Sysmon (Windows Logging Lab)](#1-splunk--sysmon-windows-logging-lab)
-- [Linux File Permissions (Google Cybersecurity Certificate)](#2-linux-file-permissions-google-cybersecurity-certificate)
-- [SQL Filters (Google Cybersecurity Certificate)](#3-sql-filters-google-cybersecurity-certificate)
-- [Python Allow-List Cleanup (Google Cybersecurity Certificate)](#4-python-allow-list-cleanup-google-cybersecurity-certificate)
-- [Vulnerability Assessment (Google Cybersecurity Certificate)](#5-vulnerability-assessment-google-cybersecurity-certificate)
-- [Controls + Compliance Checklist (Google Cybersecurity Certificate)](#6-controls--compliance-checklist-google-cybersecurity-certificate)
-- [Incident Handler’s Journal (Google Cybersecurity Certificate)](#7-incident-handlers-journal-google-cybersecurity-certificate)
+- [Splunk + Sysmon (Windows Logging Lab)](projects/splunk-sysmon-lab)
+- [Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)](projects/wireshark-traffic-lab)
+- [Linux File Permissions (Google Cybersecurity Certificate)](projects/linux-file-permissions)
+- [SQL Filters (Google Cybersecurity Certificate)](projects/sql-filters)
+- [Python Allow-List Cleanup (Google Cybersecurity Certificate)](projects/python-allowlist-update)
+- [Vulnerability Assessment (Google Cybersecurity Certificate)](projects/vulnerability-assessment)
+- [Controls + Compliance Checklist (Google Cybersecurity Certificate)](projects/controls-and-compliance)
+- [Incident Handler’s Journal (Google Cybersecurity Certificate)](projects/incident-handlers-journal)
+
 ---
+
 ## Projects
 
 ### 1) Splunk + Sysmon (Windows Logging Lab)
-**One-line summary:** Built a Windows logging setup using Sysmon + Splunk and used searches to pull process, DNS, and network activity.  
-**Open the project:** [projects/splunk-sysmon-lab](./projects/splunk-sysmon-lab)  
-**What’s inside:**
-- Full write-up (README)
-- Screenshots (evidence)
-- PDF/DOCX report
+**One-line summary:** Set up Sysmon + Splunk on Windows and used searches to find process, DNS, and network activity.  
+**Open the project:** [projects/splunk-sysmon-lab](projects/splunk-sysmon-lab)  
+**What’s inside:** write-up + screenshots + PDF/DOCX report
 
 ---
 
-### 2) Linux File Permissions (Google Cybersecurity Certificate)
+### 2) Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)
+**One-line summary:** Captured my own network traffic, then used filters to spot DNS lookups, ping traffic, one HTTP request, and TLS (encrypted) traffic.  
+**Open the project:** [projects/wireshark-traffic-lab](projects/wireshark-traffic-lab)  
+**What’s inside:** write-up + screenshots
+
+---
+
+### 3) Linux File Permissions (Google Cybersecurity Certificate)
 **One-line summary:** Practiced viewing and managing Linux file permissions using common commands.  
-**Open the project:** [projects/linux-file-permissions](./projects/linux-file-permissions)  
+**Open the project:** [projects/linux-file-permissions](projects/linux-file-permissions)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 3) SQL Filters (Google Cybersecurity Certificate)
+### 4) SQL Filters (Google Cybersecurity Certificate)
 **One-line summary:** Used SQL filters to find specific records and answer simple investigation questions.  
-**Open the project:** [projects/sql-filters](./projects/sql-filters)  
+**Open the project:** [projects/sql-filters](projects/sql-filters)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 4) Python Allow-List Cleanup (Google Cybersecurity Certificate)
-**One-line summary:** Updated a Python script to clean up an allow-list file and keep it accurate.  
-**Open the project:** [projects/python-allowlist-update](./projects/python-allowlist-update)  
+### 5) Python Allow-List Cleanup (Google Cybersecurity Certificate)
+**One-line summary:** Used a small Python script to clean up an allow-list (remove/update entries).  
+**Open the project:** [projects/python-allowlist-update](projects/python-allowlist-update)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 5) Vulnerability Assessment (Google Cybersecurity Certificate)
-**One-line summary:** Wrote a basic vulnerability assessment report and documented risks and recommendations.  
-**Open the project:** [projects/vulnerability-assessment](./projects/vulnerability-assessment)  
+### 6) Vulnerability Assessment (Google Cybersecurity Certificate)
+**One-line summary:** Wrote a basic vulnerability assessment report with risks and recommendations.  
+**Open the project:** [projects/vulnerability-assessment](projects/vulnerability-assessment)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 6) Controls + Compliance Checklist (Google Cybersecurity Certificate)
-**One-line summary:** Completed a controls/compliance checklist to map requirements to security controls.  
-**Open the project:** [projects/controls-and-compliance](./projects/controls-and-compliance)  
+### 7) Controls + Compliance Checklist (Google Cybersecurity Certificate)
+**One-line summary:** Filled out a controls/compliance checklist to map requirements to security controls.  
+**Open the project:** [projects/controls-and-compliance](projects/controls-and-compliance)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 7) Incident Handler’s Journal (Google Cybersecurity Certificate)
-**One-line summary:** Practiced writing clear incident notes and documenting what happened step-by-step.  
-**Open the project:** [projects/incident-handlers-journal](./projects/incident-handlers-journal)  
+### 8) Incident Handler’s Journal (Google Cybersecurity Certificate)
+**One-line summary:** Practiced writing incident notes and documenting what happened step-by-step.  
+**Open the project:** [projects/incident-handlers-journal](projects/incident-handlers-journal)  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
 ## How to use this repo (quick)
-- Click any project link above
-- Open the project folder README first
-- Review screenshots / PDFs / DOCX for proof and details
+1) Click a project link above  
+2) Open the project folder **README** first  
+3) Check the screenshots / PDFs / DOCX for proof + details
