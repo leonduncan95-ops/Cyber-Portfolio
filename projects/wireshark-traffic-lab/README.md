@@ -110,10 +110,3 @@ Why I checked this:
 ## Privacy note
 I didn’t upload the full `.pcapng` file because packet captures can include private info. Screenshots are enough to show what I did without exposing sensitive data.
 
----
-
-## If I do this again (next time)
-- Capture for a shorter time (like 1–2 minutes) so it’s easier to review
-- Generate traffic on purpose (visit one site + run one ping) so it’s cleaner
-- Try a second lab focused on something specific (like DNS only or HTTP only)
-
