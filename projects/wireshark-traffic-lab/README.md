@@ -11,7 +11,7 @@ I used Wireshark to capture normal network traffic from my computer, then used a
 
 ---
 
-## What I did (simple version)
+## What I did
 1. Started a capture on my Wi-Fi connection so Wireshark could “see” traffic going in and out.
 2. Let it run for a short time while I did normal stuff (opened a website + ran a ping).
 3. Used filters like `dns`, `icmp`, `http`, and `tls` to narrow down what I wanted to look at.
