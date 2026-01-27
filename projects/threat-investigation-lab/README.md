@@ -73,7 +73,7 @@ This lab shows a simple investigation: **packet capture proves the connection ha
 
 ---
 
-## Next improvements
-- Add `fail2ban` to automatically block repeated failed SSH attempts
-- Forward auth logs into a SIEM (Splunk/Security Onion) and alert on failed logins
+## improvements
+- Add limited login attempts before being locked out
+- Forward auth logs into a SIEM and alert on failed logins
 
