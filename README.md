@@ -5,6 +5,7 @@ This repo is my simple portfolio of labs and write-ups. Each project folder has 
 ---
 
 ## Quick links
+- [LetsDefend Malware SOC Investigation (Phishing Email + Malicious DOCM)](projects/LetsDefend-Malware-SOC-Investigation)
 - [Splunk + Sysmon (Windows Logging Lab)](projects/splunk-sysmon-lab)
 - [Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)](projects/wireshark-traffic-lab)
 - [SSH Login Attempt Tracking Lab (Windows → Ubuntu VM)](projects/threat-investigation-lab)
@@ -19,63 +20,70 @@ This repo is my simple portfolio of labs and write-ups. Each project folder has 
 
 ## Projects
 
-### 1) Splunk + Sysmon (Windows Logging Lab)
+### 1) LetsDefend Malware SOC Investigation (Phishing Email + Malicious DOCM)
+**One-line summary:** Investigated a phishing email with a malicious Word macro attachment, validated the file using VirusTotal + Hybrid-Analysis, checked logs for download/C2 activity, deleted the email, and contained the host.  
+**Open the project:** `projects/LetsDefend-Malware-SOC-Investigation`  
+**What’s inside:** write-up + screenshots
+
+---
+
+### 2) Splunk + Sysmon (Windows Logging Lab)
 **One-line summary:** Set up Sysmon + Splunk on Windows and used searches to find process, DNS, and network activity.  
 **Open the project:** `projects/splunk-sysmon-lab`  
 **What’s inside:** write-up + screenshots + PDF/DOCX report
 
 ---
 
-### 2) Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)
+### 3) Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)
 **One-line summary:** Captured my own network traffic, then used filters to spot DNS lookups, ping traffic, one HTTP request, and TLS (encrypted) traffic.  
 **Open the project:** `projects/wireshark-traffic-lab`  
 **What’s inside:** write-up + screenshots
 
 ---
 
-### 3) SSH Login Attempt Tracking Lab (Windows → Ubuntu VM)
+### 4) SSH Login Attempt Tracking Lab (Windows → Ubuntu VM)
 **One-line summary:** Connected my Windows laptop to an Ubuntu VM on a host-only network, generated failed + successful SSH logins, then used Wireshark + Ubuntu logs to prove what happened.  
 **Open the project:** `projects/threat-investigation-lab`  
 **What’s inside:** write-up + screenshots (Wireshark + Linux auth logs)
 
 ---
 
-### 4) Linux File Permissions (Google Cybersecurity Certificate)
+### 5) Linux File Permissions (Google Cybersecurity Certificate)
 **One-line summary:** Practiced viewing and managing Linux file permissions using common commands.  
 **Open the project:** `projects/linux-file-permissions`  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 5) SQL Filters (Google Cybersecurity Certificate)
+### 6) SQL Filters (Google Cybersecurity Certificate)
 **One-line summary:** Practiced using SQL filters to find and narrow down security-relevant data.  
 **Open the project:** `projects/sql-filters`  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 6) Python Allow-List Cleanup (Google Cybersecurity Certificate)
+### 7) Python Allow-List Cleanup (Google Cybersecurity Certificate)
 **One-line summary:** Practiced updating an allow-list using a simple Python script (remove/update entries safely).  
 **Open the project:** `projects/python-allowlist-update`  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 7) Vulnerability Assessment (Google Cybersecurity Certificate)
+### 8) Vulnerability Assessment (Google Cybersecurity Certificate)
 **One-line summary:** Wrote a basic vulnerability assessment report with risks and recommendations.  
 **Open the project:** `projects/vulnerability-assessment`  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 8) Controls + Compliance Checklist (Google Cybersecurity Certificate)
+### 9) Controls + Compliance Checklist (Google Cybersecurity Certificate)
 **One-line summary:** Filled out a controls/compliance checklist to map requirements to security controls.  
 **Open the project:** `projects/controls-and-compliance`  
 **What’s inside:** write-up + supporting document(s)
 
 ---
 
-### 9) Incident Handler’s Journal (Google Cybersecurity Certificate)
+### 10) Incident Handler’s Journal (Google Cybersecurity Certificate)
 **One-line summary:** Practiced writing incident notes and documenting what happened step-by-step.  
 **Open the project:** `projects/incident-handlers-journal`  
 **What’s inside:** write-up + supporting document(s)
@@ -83,6 +91,6 @@ This repo is my simple portfolio of labs and write-ups. Each project folder has 
 ---
 
 ## How to use this repo (quick)
-1. Click a project link above  
-2. Open the project folder README first  
+1. Click a project link above
+2. Open the project folder README first
 3. Check the screenshots / PDFs / DOCX for proof + details
