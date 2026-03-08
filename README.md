@@ -5,6 +5,8 @@ This repo is my simple portfolio of labs and write-ups. Each project folder has 
 ---
 
 ## Quick links
+
+- [Microsoft Sentinel + Azure VM Log Monitoring Lab](projects/Microsoft-Sentinel-VM-Azure-Logs)
 - [LetsDefend Malware SOC Investigation (Phishing Email + Malicious DOCM)](projects/LetsDefend-Malware-SOC-Investigation)
 - [Splunk + Sysmon (Windows Logging Lab)](projects/splunk-sysmon-lab)
 - [Wireshark Traffic Lab (DNS + ICMP + HTTP + TLS)](projects/wireshark-traffic-lab)
