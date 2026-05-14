@@ -4,7 +4,7 @@ This repo is my simple portfolio of labs and write-ups. Each project folder has 
 
 ---
 
-## Quick links
+## Quick links 
 
 - [Microsoft Sentinel + Azure VM Log Monitoring Lab](projects/Microsoft-Sentinel-VM-Azure-Logs)
 - [LetsDefend Malware SOC Investigation (Phishing Email + Malicious DOCM)](projects/LetsDefend-Malware-SOC-Investigation)
